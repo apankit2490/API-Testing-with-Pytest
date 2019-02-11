@@ -99,10 +99,53 @@ class Test_board_push:
         id="5c615ba7f5c7564b8f9e8c43"
         response=requests.post(self.url+id+"/labels",params={'key':self.key,'token':self.token,'name':None,'color':'blue'})
         assert (response.status_code == 400)
-    def test_create_lablel_invalid_color(self):#testcase_20
+    def test_create_lablel_invalid_color(self):#testcase_21
         id="5c615ba7f5c7564b8f9e8c43"
         response=requests.post(self.url+id+"/labels",params={'key':self.key,'token':self.token,'name':'ankit22','color':' '})
         assert (response.status_code == 400)
+    '''def test_create_label_forbidden(self):#testcase_22
+        id = "5c616913e3fca870309fd37a"
+        response = requests.post(self.url + id + "/labels",params={'key': self.key, 'token': self.token, 'name': 'ankit22', 'color':'black'})
+        assert (response.status_code == 403)'''
+    def test_list_create(self):#testcase_23
+        id="5c616913e3fca870309fd37a"
+        response=requests.post(self.url+id+"/lists",params={'key': self.key, 'token': self.token, 'name': 'ankit22','pos':'top'})
+        assert (response.status_code==200)
+    def test_list_create_invalid_key(self):#testcase_24
+        id="5c616913e3fca870309fd37a"
+        response=requests.post(self.url+id+"/lists",params={'key': 'dfddd', 'token': self.token, 'name': 'ankit22','pos':'top'})
+        assert (response.status_code==401)
+    def test_list_create_invalid_id(self):#testcase_25
+        id="5c616913e3fca87030adsdsd9fd37a"
+        response=requests.post(self.url+id+"/lists",params={'key': self.key, 'token': self.token, 'name': 'ankit22','pos':'top'})
+        assert (response.status_code==400)
+    def test_list_create_invalid_name(self):#testcase_26
+        id="5c616913e3fca870309fd37a"
+        response=requests.post(self.url+id+"/lists",params={'key': self.key, 'token': self.token, 'name': None,'pos':'top'})
+        assert (response.status_code==400)
+
+    def test_list_create_invalid_position(self):  # testcase_27
+        id = "5c616913e3fca870309fd37a"
+        response = requests.post(self.url + id + "/lists",
+                                 params={'key': self.key, 'token': self.token, 'name': 'ankit', 'pos': 'kjbhkjb'})
+        assert (response.status_code == 400)
+
+    '''def test_list_create_forbidden(self):  # testcase_28
+        id = "5c616913e3fca870309fd37a"
+        response = requests.post(self.url + id + "/lists",
+                                 params={'key': self.key, 'token': self.token, 'name': 'ankit', 'pos': 'top'})
+        assert (response.status_code == 403)'''
+    def test_markviewed(self):#testcase_29
+        id="5c616913e3fca870309fd37a"
+        response = requests.post(self.url + id,
+                                 params=self.payload)
+        assert (response.status_code == 200)
+
+
+
+
+
+
 
 
 
