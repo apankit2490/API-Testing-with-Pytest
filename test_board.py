@@ -25,7 +25,57 @@ class Test_board_push:
         response = requests.post(self.url,params={'key':self.key,'token':self.token,'name':None})
         print(self.payload)
         assert (response.status_code == 400)
-    def test_newboard_forbidden(self):
+    '''def test_newboard_forbidden(self):#testcase_4
+        response = requests.post(self.url, params={'key': self.key, 'token': self.token, 'name': None})
+        print(self.payload)'''
+    '''def test_calenderkey(self):#TestCase_5
+        iid="5c615ba7f5c7564b8f9e8c43"
+        response=requests.post(self.url+id+"/calendarKey/generate",params={'key': self.key, 'token': self.token})
+        assert (response.status_code == 200)'''
+    def test_calenderkey_invalid_id(self):#TestCase_6
+        id="5c615ba7f5c7564b8f9esdssd8c43"
+        response=requests.post(self.url+id+"/calendarKey/generate",params={'key': self.key, 'token': self.token})
+        assert (response.status_code == 400)
+
+    def test_calenderkey_invalid_token_key(self):#TestCase_7
+        id="5c615ba7f5c7564b8f9e8c43"
+        response=requests.post(self.url+id+"/calendarKey/generate",params={'key':'sdfs', 'token': self.token})
+        assert (response.status_code == 401)
+
+    def test_calenderkey_forbidden(self):#TestCase_8
+        id="5c616913e3fca870309fd37a"
+        response=requests.post(self.url+id+"/calendarKey/generate",params={'key':self.key, 'token': self.token})
+        assert (response.status_code == 403)
+    '''def test_newchecklist(self):#testcase_9
+        id="5c615ba7f5c7564b8f9e8c43"
+        response=requests.post(self.url+id+"/checklists",params=self.payload)
+        assert (response.status_code == 200)'''
+    def test_checklist_invalidkey(self):#TestCase_10
+        id = "5c615ba7f5c7564b8f9e8c43"
+        response = requests.post(self.url + id + "/checklists", params={'key':'sdfs', 'token': self.token})
+        assert (response.status_code == 401)
+    def test_checklist_invalidboardid(self):#TestCase_11
+        id = "5c615ba7sdsf5c7564b8f9e8c43"
+        response = requests.post(self.url + id + "/checklists", params=self.payload)
+        assert (response.status_code == 400)
+    def test_checklist_invalid_name(self):#TestCase_12
+        id = "5c615ba7f5c7564b8f9e8c43"
+        response = requests.post(self.url + id + "/checklists", params={'key':self.key,'token':self.token,'name':None})
+        assert (response.status_code == 400)
+    def test_checklist_forbidden(self):#TestCase_13
+        id = "5c616913e3fca870309fd37a"
+        response = requests.post(self.url + id + "/checklists", params=self.payload)
+        assert (response.status_code == 403)
+
+
+
+
+
+
+
+
+
+
 
 
 
