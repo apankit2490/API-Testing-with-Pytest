@@ -62,10 +62,55 @@ class Test_board_push:
         id = "5c615ba7f5c7564b8f9e8c43"
         response = requests.post(self.url + id + "/checklists", params={'key':self.key,'token':self.token,'name':None})
         assert (response.status_code == 400)
-    def test_checklist_forbidden(self):#TestCase_13
+    '''def test_checklist_forbidden(self):#TestCase_13
         id = "5c616913e3fca870309fd37a"
         response = requests.post(self.url + id + "/checklists", params=self.payload)
-        assert (response.status_code == 403)
+        assert (response.status_code == 403)'''
+    def test_new_emailkey(self):#testcase_14
+        id="5c615ba7f5c7564b8f9e8c43"
+        response=requests.post(self.url+id+"/emailKey/generate",params=self.payload)
+        assert (response.status_code==200)
+    def test_emailkey_invalidkey(self):#testcase_15
+        id = "5c615ba7f5c7564b8f9e8c43"
+        response = requests.post(self.url + id + "/emailKey/generate", params={'key':'sdfs', 'token': self.token})
+        assert (response.status_code == 401)
+
+    def test_emailkey_invalid_boardid(self):#testcase_16
+        id = "5c615ba7f5c756sdsddsddd4b8f9e8c43"
+        response = requests.post(self.url + id + "/emailKey/generate", params=self.payload)
+        assert (response.status_code == 400)
+
+    def test_create_lablel(self):#testcase_17
+        id="5c615ba7f5c7564b8f9e8c43"
+        response=requests.post(self.url+id+"/labels",params={'key':self.key,'token':self.token,'name':'ankitpatnaik','color':'blue'})
+        assert (response.status_code == 200)
+        color=response.json()['color']
+        assert (color=='blue')
+
+    def test_create_lablel_invalidkey(self):#testcase_18
+        id="5c615ba7f5c7564b8f9e8c43"
+        response=requests.post(self.url+id+"/labels",params={'key':'sasas','token':self.token,'name':'ankitpatnaik','color':'blue'})
+        assert (response.status_code == 401)
+    def test_create_lablel_invalid_id(self):#testcase_19
+        id="5c615ba7f5c7564b8sdsdf9e8c43"
+        response=requests.post(self.url+id+"/labels",params={'key':self.key,'token':self.token,'name':'ankitpatnaik','color':'blue'})
+        assert (response.status_code == 400)
+    def test_create_lablel_invalid_name(self):#testcase_20
+        id="5c615ba7f5c7564b8f9e8c43"
+        response=requests.post(self.url+id+"/labels",params={'key':self.key,'token':self.token,'name':None,'color':'blue'})
+        assert (response.status_code == 400)
+    def test_create_lablel_invalid_color(self):#testcase_20
+        id="5c615ba7f5c7564b8f9e8c43"
+        response=requests.post(self.url+id+"/labels",params={'key':self.key,'token':self.token,'name':'ankit22','color':' '})
+        assert (response.status_code == 400)
+
+
+
+
+
+
+
+
 
 
 
