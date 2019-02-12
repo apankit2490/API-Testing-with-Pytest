@@ -135,11 +135,27 @@ class Test_board_push:
         response = requests.post(self.url + id + "/lists",
                                  params={'key': self.key, 'token': self.token, 'name': 'ankit', 'pos': 'top'})
         assert (response.status_code == 403)'''
-    def test_markviewed(self):#testcase_29
+    '''def test_markviewed(self):#testcase_29
         id="5c616913e3fca870309fd37a"
         response = requests.post(self.url + id,
                                  params=self.payload)
-        assert (response.status_code == 200)
+        assert (response.status_code == 200)'''
+    def test_delete_board(self):#testcase_29
+        id = "5c61576a9e83e20f3781f091"
+        response=requests.delete(self.url+id+'/',params=self.payload)
+        assert (response.status_code==200)
+        try:
+            response = requests.get(self.url + '/' + id, params=self.payload)
+        except:
+            assert (id!=response.json()['id'])
+
+
+
+
+
+
+
+
 
 
 
