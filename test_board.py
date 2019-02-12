@@ -158,14 +158,15 @@ class Test_board_push:
         except:
             assert (id!=response.json()['id'])
 
-    def test_delete_board(self):#testcase_33---DELETE CASE
-            id = "5c61576a9e83e20f3781f091"
+    def test_delete_board_invalid_ID(self):#testcase_34
+            id = "dfsfds"
             response=requests.delete(self.url+id+'/',params=self.payload)
-            assert (response.status_code==200)
+            assert (response.status_code==400)
             try:
                 response = requests.get(self.url + '/' + id, params=self.payload)
             except:
                 assert (id!=response.json()['id'])
+
 
 
 
