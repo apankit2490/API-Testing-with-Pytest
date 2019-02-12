@@ -140,14 +140,34 @@ class Test_board_push:
         response = requests.post(self.url + id,
                                  params=self.payload)
         assert (response.status_code == 200)'''
-    def test_delete_board(self):#testcase_29
+    '''def test_delete_board(self):#testcase_33---DELETE CASE
         id = "5c61576a9e83e20f3781f091"
         response=requests.delete(self.url+id+'/',params=self.payload)
         assert (response.status_code==200)
         try:
             response = requests.get(self.url + '/' + id, params=self.payload)
         except:
+            assert (id!=response.json()['id'])'''
+
+    def test_delete_board_invalid_key(self):#testcase_33
+        id = "5c6157a6f9de98516834e643"
+        response=requests.delete(self.url+id+'/',params={'key':'vjadcvja','token':'asa'})
+        assert (response.status_code==401)
+        try:
+            response = requests.get(self.url + '/' + id, params=self.payload)
+        except:
             assert (id!=response.json()['id'])
+
+    def test_delete_board(self):#testcase_33---DELETE CASE
+            id = "5c61576a9e83e20f3781f091"
+            response=requests.delete(self.url+id+'/',params=self.payload)
+            assert (response.status_code==200)
+            try:
+                response = requests.get(self.url + '/' + id, params=self.payload)
+            except:
+                assert (id!=response.json()['id'])
+
+
 
 
 
