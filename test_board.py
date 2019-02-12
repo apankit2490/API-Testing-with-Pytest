@@ -1,6 +1,7 @@
 import pytest
 import json
 import requests
+
 class Test_board_push:
     @classmethod
     def setup_class(cls):
@@ -149,7 +150,7 @@ class Test_board_push:
         except:
             assert (id!=response.json()['id'])'''
 
-    def test_delete_board_invalid_key(self):#testcase_33
+    def test_delete_board_invalid_key(self):#testcase_34
         id = "5c6157a6f9de98516834e643"
         response=requests.delete(self.url+id+'/',params={'key':'vjadcvja','token':'asa'})
         assert (response.status_code==401)
@@ -158,40 +159,39 @@ class Test_board_push:
         except:
             assert (id!=response.json()['id'])
 
-    def test_delete_board(self):#testcase_33---DELETE CASE
-            id = "5c61576a9e83e20f3781f091"
+    def test_delete_board_invalid_ID(self):#testcase_35
+            id = "dfsfds"
             response=requests.delete(self.url+id+'/',params=self.payload)
-            assert (response.status_code==200)
+            assert (response.status_code==400)
             try:
                 response = requests.get(self.url + '/' + id, params=self.payload)
             except:
                 assert (id!=response.json()['id'])
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    def test_delete_board_FORBIDDEN(self):#testcase_36
+          id = "5c616913e3fca870309fd37a"
+          response=requests.delete(self.url+id+'/',params=self.payload)
+          assert (response.status_code==401)
+    '''def test_delete_board_member(self):#testcase_37---DELETE CASE
+        id="5c615ba7f5c7564b8f9e8c43"
+        idmember="5c60f71ca2a4b77022e377fd"
+        response=requests.delete(self.url+id+"/members/"+idmember,params=self.payload)
+        assert (response.status_code==200)'''
+    def test_delete_board_member_invalidKey(self):#testcase_38
+            id="5c615ba7f5c7564b8f9e8c43"
+            idmember="5c60f71ca2a4b77022e377fd"
+            response=requests.delete(self.url+id+"/members/"+idmember,params={'key':'adfa','token':'df'})
+            assert (response.status_code==401)
+    def test_delete_board_member_invalidBOARD_ID(self):#testcase_39
+            id="ADSADSAD"
+            idmember="5c60f71ca2a4b77022e377fd"
+            response=requests.delete(self.url+id+"/members/"+idmember,params=self.payload)
+            assert (response.status_code==404)
+    def test_delete_board_member_FORBIDDEN(self):#testcase_40
+            id="5c616913e3fca870309fd37a"
+            idmember="5c60f71ca2a4b77022e377fd"
+            response=requests.delete(self.url+id+"/members/"+idmember,params=self.payload)
+            assert (response.status_code==401)
 
 
 
@@ -207,3 +207,48 @@ class Test_board_push:
 
 if __name__=='__main__':
     pytest.main()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
