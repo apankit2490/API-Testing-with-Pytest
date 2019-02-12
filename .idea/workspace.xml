@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dd1b5aba-5549-48d1-8a2d-492baf1902e0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/test_board2.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_board2.py" afterDir="false" />
-    </list>
+    <list default="true" id="dd1b5aba-5549-48d1-8a2d-492baf1902e0" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,8 +37,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test_board2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="49">
-              <caret line="97" column="78" selection-start-line="97" selection-start-column="67" selection-end-line="97" selection-end-column="78" />
+            <state relative-caret-position="199">
+              <caret line="113" column="79" selection-start-line="113" selection-start-column="79" selection-end-line="113" selection-end-column="79" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -121,7 +119,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.pytest for test_board2.Test_board_push2.test_retrive_allfields_singleboard_invalidkey">
+  <component name="RunManager" selected="Python tests.pytest for test_board2.Test_board_push2.test_retrive_allfields_singleboard_invalidboardid">
     <configuration name="pytest for test_board2.Test_board_push2.test_retrive_allfields_singleboard" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="TestAPI" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -137,6 +135,21 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest for test_board2.Test_board_push2.test_retrive_allfields_singleboard_invalidboardid" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="TestAPI" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_board2.Test_board_push2.test_retrive_allfields_singleboard_invalidboardid&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="pytest for test_board2.Test_board_push2.test_retrive_allfields_singleboard_invalidkey" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="TestAPI" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -149,21 +162,6 @@
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;test_board2.Test_board_push2.test_retrive_allfields_singleboard_invalidkey&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pytest for test_board2.Test_board_push2.test_update_specific_boardmember_invalid_boardid" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="TestAPI" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_board2.Test_board_push2.test_update_specific_boardmember_invalid_boardid&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -199,11 +197,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest for test_board2.Test_board_push2.test_retrive_allfields_singleboard_invalidboardid" />
         <item itemvalue="Python tests.pytest for test_board2.Test_board_push2.test_retrive_allfields_singleboard_invalidkey" />
         <item itemvalue="Python tests.pytest for test_board2.Test_board_push2.test_retrive_allfields_singleboard" />
         <item itemvalue="Python tests.pytest for test_board2.Test_board_push2.test_update_specific_boardmember_invalid_membertype" />
         <item itemvalue="Python tests.pytest for test_board2.Test_board_push2.test_update_specific_boardmember_invalid_memberid" />
-        <item itemvalue="Python tests.pytest for test_board2.Test_board_push2.test_update_specific_boardmember_invalid_boardid" />
       </list>
     </recent_temporary>
   </component>
@@ -229,12 +227,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="pytest_for_test_board2_Test_board_push2_test_update_specific_boardmember - 2019.02.12 at 13h 00m 41s.xml">
-      <configuration name="pytest for test_board2.Test_board_push2.test_update_specific_boardmember" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_for_test_board2_Test_board_push2_test_update_specific_boardmember - 2019.02.12 at 13h 02m 48s.xml">
-      <configuration name="pytest for test_board2.Test_board_push2.test_update_specific_boardmember" configurationId="tests" />
-    </history-entry>
     <history-entry file="pytest_for_test_board2_Test_board_push2_test_update_specific_boardmember_invalid_key - 2019.02.12 at 13h 04m 38s.xml">
       <configuration name="pytest for test_board2.Test_board_push2.test_update_specific_boardmember_invalid_key" configurationId="tests" />
     </history-entry>
@@ -259,21 +251,26 @@
     <history-entry file="pytest_for_test_board2_Test_board_push2_test_retrive_allfields_singleboard - 2019.02.12 at 18h 19m 38s.xml">
       <configuration name="pytest for test_board2.Test_board_push2.test_retrive_allfields_singleboard" configurationId="tests" />
     </history-entry>
+    <history-entry file="pytest_for_test_board2_Test_board_push2_test_retrive_allfields_singleboard_invalidkey - 2019.02.12 at 18h 21m 37s.xml">
+      <configuration name="pytest for test_board2.Test_board_push2.test_retrive_allfields_singleboard_invalidkey" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_for_test_board2_Test_board_push2_test_retrive_allfields_singleboard_invalidboardid - 2019.02.12 at 18h 22m 29s.xml">
+      <configuration name="pytest for test_board2.Test_board_push2.test_retrive_allfields_singleboard_invalidboardid" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.18808778" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" weight="0.33713356" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.33713356" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="2" weight="0.32899022" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" />
       <window_info anchor="bottom" id="Version Control" order="5" weight="0.2801303" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.39739415" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.39739415" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.39739415" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -364,8 +361,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test_board2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="49">
-          <caret line="97" column="78" selection-start-line="97" selection-start-column="67" selection-end-line="97" selection-end-column="78" />
+        <state relative-caret-position="199">
+          <caret line="113" column="79" selection-start-line="113" selection-start-column="79" selection-end-line="113" selection-end-column="79" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>

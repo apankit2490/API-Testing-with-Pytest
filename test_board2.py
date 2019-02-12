@@ -116,6 +116,10 @@ class Test_board_push2:
         resp = requests.get(self.url + id, params=self.payload)
         assert (resp.status_code == 400)
 
+    def test_retrive_allfields_singleboard_forbidden(self):  # testcase_60
+        id = "5c618c396220596250a10d64"
+        resp = requests.get(self.url + id, params=self.payload)
+        assert (resp.status_code == 401)
 
 
 
