@@ -181,6 +181,11 @@ class Test_board_push:
             idmember="5c60f71ca2a4b77022e377fd"
             response=requests.delete(self.url+id+"/members/"+idmember,params={'key':'adfa','token':'df'})
             assert (response.status_code==401)
+    def test_delete_board_member_invalidBOARD_ID(self):#testcase_39
+            id="ADSADSAD"
+            idmember="5c60f71ca2a4b77022e377fd"
+            response=requests.delete(self.url+id+"/members/"+idmember,params=self.payload)
+            assert (response.status_code==404)
 
 
 
