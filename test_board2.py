@@ -1,34 +1,46 @@
 import pytest
 import json
 import requests
+from Helper import *
 class Test_board_push2:
     @classmethod
     def setup_class(cls):
         with open('data.json','r') as data:
             data=json.load(data)
-            cls.key = data['key']
-            cls.token = data['token']
-            cls.url = data['url']
-            cls.name = data['uname']
-            cls.payload = {'key': cls.key, 'token': cls.token, 'name': cls.name}
+        cls.key = data['key']
+        cls.token = data['token']
+        cls.url = data['url']
+        cls.name = data['uname']
+        cls.payload = {'key': cls.key, 'token': cls.token, 'name': cls.name}
+        cls.testinvalidkey = data['testinvalidkey']
+        cls.testinvalidtoken = data['testinvalidtoken']
+        cls.testinvalidid = data['testinvalidid']
+        cls.payload = {'key': cls.key, 'token': cls.token, 'name': cls.name}
+        createboard(payload)
+        cls.testboardid = getid('test_BOARD')
+
+    def teardown_method(self):
+        print(deleteboard(self.testboardid))
+
     def test_update_board(self):#testcase_41
-        id="5c610bdaef382018a436b32e"
+        id=self.testboardid
         response=requests.put(self.url+id,params={'key':self.key,'token':self.token,'name':'divya hg'})
         assert (response.status_code==200)
         name=requests.get(self.url+'/'+id,params=self.payload).json()['name']
         assert (name=='divya hg')
+
     def test_update_board_INVALID_KEY(self):#testcase_42
-        id="5c610bdaef382018a436b32e"
-        response=requests.put(self.url+id,params={'key':'dscs','token':self.token,'name':'divya hg'})
+        id=self.testboardid
+        response=requests.put(self.url+id,params={'key':self.testinvalidkey,'token':self.testinvalidtoken,'name':'divya hg'})
         assert (response.status_code==401)
 
     def test_update_board_INVALID_boardid(self):  # testcase_43
-        id = "aasskk"
+        id = self.testinvalidid
         response = requests.put(self.url + id, params={'key': self.key, 'token': self.token, 'name': 'divya hg'})
         assert (response.status_code == 400)
 
-    def test_update_board(self):#testcase_44
-        id="5c616913e3fca870309fd37a"
+    def test_update_board_forbidden(self):#testcase_44
+        id="5c618c396220596250a10d64"#another's board
         response=requests.put(self.url+id,params={'key':self.key,'token':self.token,'name':'divya hg'})
         assert (response.status_code==401)
     def test_update_boardmember(self):#testcase_45
