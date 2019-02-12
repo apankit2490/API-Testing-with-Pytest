@@ -50,6 +50,13 @@ class Test_board_push2:
                                         'email': 'abcd@xyz.com', 'type': 'normal'})
         assert (response.status_code == 400)
 
+    def test_update_boardmember_emptyemail(self):  # testcase_48
+        id = "5c610bdaef382018a436b32e"
+        response = requests.put(self.url + id + '/members',
+                                params={'key': self.key, 'token': self.token, 'fullName': 'ankkit249012',
+                                        'email': None, 'type': 'normal'})
+        assert (response.status_code == 400)
+
 
 
 
