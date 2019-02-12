@@ -120,6 +120,20 @@ class Test_board_push2:
         id = "5c618c396220596250a10d64"
         resp = requests.get(self.url + id, params=self.payload)
         assert (resp.status_code == 401)
+    def test_retrive_specificfields_board(self):#testcase_61
+        id="5c616913e3fca870309fd37a"
+        field="labelNames"
+        resp = requests.get(self.url + id, params={'key':self.key,'token':self.token,'field':field})
+        assert (resp.status_code==200)
+        assert id == resp.json()['id']
+    def test_retrive_specificfields_board_invalidkey(self):#testcase_62
+        id="5c616913e3fca870309fd37a"
+        field="labelNames"
+        resp = requests.get(self.url + id, params={'key':'xxxx','token':self.token,'field':field})
+        assert (resp.status_code==401)
+
+
+
 
 
 
