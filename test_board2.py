@@ -137,15 +137,11 @@ class Test_board_push2:
         resp = requests.get(self.url + id, params={'key':self.key,'token':self.token,'field':field})
         assert (resp.status_code==400)
 
-
-
-
-
-
-
-
-
-
+    def test_retrive_specificfields_board_invalidfield(self):  # testcase_64
+        id = "5c616913e3fca870309fd37a"
+        field = None
+        resp = requests.get(self.url + id+'/field', params={'key': self.key, 'token': self.token})
+        assert (resp.status_code == 404)
 
 
 if __name__=='__main__':
