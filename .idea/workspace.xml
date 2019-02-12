@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dd1b5aba-5549-48d1-8a2d-492baf1902e0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/test_board2.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_board2.py" afterDir="false" />
-    </list>
+    <list default="true" id="dd1b5aba-5549-48d1-8a2d-492baf1902e0" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,8 +37,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test_board2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="75" column="20" selection-start-line="75" selection-start-column="20" selection-end-line="75" selection-end-column="20" />
+            <state relative-caret-position="154">
+              <caret line="70" column="59" selection-start-line="70" selection-start-column="59" selection-end-line="70" selection-end-column="59" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -229,18 +227,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="pytest_for_test_board2_Test_board_push2_test_update_boardmember - 2019.02.12 at 11h 41m 41s.xml">
-      <configuration name="pytest for test_board2.Test_board_push2.test_update_boardmember" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_for_test_board2_Test_board_push2_test_update_boardmember - 2019.02.12 at 11h 45m 11s.xml">
-      <configuration name="pytest for test_board2.Test_board_push2.test_update_boardmember" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_for_test_board2_Test_board_push2_test_update_boardmember - 2019.02.12 at 11h 45m 58s.xml">
-      <configuration name="pytest for test_board2.Test_board_push2.test_update_boardmember" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_for_test_board2_Test_board_push2_test_update_boardmember_invalidkey - 2019.02.12 at 11h 49m 10s.xml">
-      <configuration name="pytest for test_board2.Test_board_push2.test_update_boardmember_invalidkey" configurationId="tests" />
-    </history-entry>
     <history-entry file="pytest_for_test_board2_Test_board_push2_test_update_boardmember_invalidboardid - 2019.02.12 at 11h 50m 16s.xml">
       <configuration name="pytest for test_board2.Test_board_push2.test_update_boardmember_invalidboardid" configurationId="tests" />
     </history-entry>
@@ -259,10 +245,21 @@
     <history-entry file="pytest_for_test_board2_Test_board_push2_test_update_boardmember_forbidden - 2019.02.12 at 12h 48m 01s.xml">
       <configuration name="pytest for test_board2.Test_board_push2.test_update_boardmember_forbidden" configurationId="tests" />
     </history-entry>
+    <history-entry file="pytest_for_test_board2_Test_board_push2_test_update_specific_boardmember - 2019.02.12 at 12h 58m 28s.xml">
+      <configuration name="pytest for test_board2.Test_board_push2.test_update_specific_boardmember" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_for_test_board2_Test_board_push2_test_update_specific_boardmember - 2019.02.12 at 12h 59m 26s.xml">
+      <configuration name="pytest for test_board2.Test_board_push2.test_update_specific_boardmember" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_for_test_board2_Test_board_push2_test_update_specific_boardmember - 2019.02.12 at 13h 00m 41s.xml">
+      <configuration name="pytest for test_board2.Test_board_push2.test_update_specific_boardmember" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_for_test_board2_Test_board_push2_test_update_specific_boardmember - 2019.02.12 at 13h 02m 48s.xml">
+      <configuration name="pytest for test_board2.Test_board_push2.test_update_specific_boardmember" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18808778" />
@@ -383,8 +380,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test_board2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="75" column="20" selection-start-line="75" selection-start-column="20" selection-end-line="75" selection-end-column="20" />
+        <state relative-caret-position="154">
+          <caret line="70" column="59" selection-start-line="70" selection-start-column="59" selection-end-line="70" selection-end-column="59" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>

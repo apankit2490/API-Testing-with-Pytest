@@ -75,6 +75,12 @@ class Test_board_push2:
         assert (response.status_code==200)
         returnvalue=response.json()['memberships'][0]['memberType']
         assert (returnvalue=='admin')
+    def test_update_specific_boardmember_invalid_key(self):#testcase_52
+        id="5c616a0f0e01197a3562a289"
+        idmember="5c60f71ca2a4b77022e377fd"
+        response=requests.put(self.url+id+'/members/'+idmember,params={'key':'aaxx','token':self.token,'type':'admin'})
+        assert (response.status_code==401)
+
 
 
 
