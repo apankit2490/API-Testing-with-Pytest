@@ -31,11 +31,25 @@ class Test_board_push2:
         id="5c616913e3fca870309fd37a"
         response=requests.put(self.url+id,params={'key':self.key,'token':self.token,'name':'divya hg'})
         assert (response.status_code==401)
-    def test_update_boardmember(self):#testcase_44
+    def test_update_boardmember(self):#testcase_45
         id="5c610bdaef382018a436b32e"
         response=requests.put(self.url+id+'/members',params={'key':self.key,'token':self.token,'fullName':'ankkit249012',
                                                              'email':'abcd@xyz.com','type':'normal'})
         assert (response.status_code==200)
+
+    def test_update_boardmember_invalidkey(self):  # testcase_46
+        id = "5c610bdaef382018a436b32e"
+        response = requests.put(self.url + id + '/members',
+                                params={'key': 'ssssddd', 'token': 'ssds', 'fullName': 'ankkit249012',
+                                        'email': 'abcd@xyz.com', 'type': 'normal'})
+        assert (response.status_code == 401)
+    def test_update_boardmember_invalidboardid(self):  # testcase_46
+        id = "xxxsss"
+        response = requests.put(self.url + id + '/members',
+                                params={'key': 'ssssddd', 'token': 'ssds', 'fullName': 'ankkit249012',
+                                        'email': 'abcd@xyz.com', 'type': 'normal'})
+        assert (response.status_code == 401)
+
 
 
 
