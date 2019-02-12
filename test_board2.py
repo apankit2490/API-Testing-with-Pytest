@@ -106,6 +106,11 @@ class Test_board_push2:
         assert (resp.status_code==200)
         returnid=resp.json()['id']
         assert (returnid==id)
+    def test_retrive_allfields_singleboard_invalidkey(self):#testcase_58
+        id = "5c616913e3fca870309fd37a"
+        resp=requests.get(self.url+id,params=self.payload.update({'key':'xxxxx'}))
+        assert (resp.status_code==401)
+
 
 
 
