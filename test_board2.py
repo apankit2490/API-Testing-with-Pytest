@@ -43,12 +43,12 @@ class Test_board_push2:
                                 params={'key': 'ssssddd', 'token': 'ssds', 'fullName': 'ankkit249012',
                                         'email': 'abcd@xyz.com', 'type': 'normal'})
         assert (response.status_code == 401)
-    def test_update_boardmember_invalidboardid(self):  # testcase_46
+    def test_update_boardmember_invalidboardid(self):  # testcase_47
         id = "xxxsss"
         response = requests.put(self.url + id + '/members',
-                                params={'key': 'ssssddd', 'token': 'ssds', 'fullName': 'ankkit249012',
+                                params={'key': self.key, 'token': self.token, 'fullName': 'ankkit249012',
                                         'email': 'abcd@xyz.com', 'type': 'normal'})
-        assert (response.status_code == 401)
+        assert (response.status_code == 400)
 
 
 
