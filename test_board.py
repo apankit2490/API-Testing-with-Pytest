@@ -149,7 +149,7 @@ class Test_board_push:
         except:
             assert (id!=response.json()['id'])'''
 
-    def test_delete_board_invalid_key(self):#testcase_33
+    def test_delete_board_invalid_key(self):#testcase_34
         id = "5c6157a6f9de98516834e643"
         response=requests.delete(self.url+id+'/',params={'key':'vjadcvja','token':'asa'})
         assert (response.status_code==401)
@@ -158,7 +158,7 @@ class Test_board_push:
         except:
             assert (id!=response.json()['id'])
 
-    def test_delete_board_invalid_ID(self):#testcase_34
+    def test_delete_board_invalid_ID(self):#testcase_35
             id = "dfsfds"
             response=requests.delete(self.url+id+'/',params=self.payload)
             assert (response.status_code==400)
@@ -166,6 +166,12 @@ class Test_board_push:
                 response = requests.get(self.url + '/' + id, params=self.payload)
             except:
                 assert (id!=response.json()['id'])
+
+    def test_delete_board(self):#testcase_36
+          id = "5c616913e3fca870309fd37a"
+          response=requests.delete(self.url+id+'/',params=self.payload)
+          assert (response.status_code==401)
+
 
 
 
