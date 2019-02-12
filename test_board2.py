@@ -22,4 +22,18 @@ class Test_board_push2:
         response=requests.put(self.url+id,params={'key':'dscs','token':self.token,'name':'divya hg'})
         assert (response.status_code==401)
 
+    def test_update_board_INVALID_boardid(self):  # testcase_41
+        id = "aasskk"
+        response = requests.put(self.url + id, params={'key': self.key, 'token': self.token, 'name': 'divya hg'})
+        assert (response.status_code == 400)
+
+    def test_update_board(self):#testcase_41
+        id="5c616913e3fca870309fd37a"
+        response=requests.put(self.url+id,params={'key':self.key,'token':self.token,'name':'divya hg'})
+        assert (response.status_code==401)
+
+
+
+if __name__=='__main__':
+    pytest.main()
 
