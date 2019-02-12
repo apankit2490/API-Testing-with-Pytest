@@ -111,6 +111,11 @@ class Test_board_push2:
         resp=requests.get(self.url+id,params=self.payload.update({'key':'xxxxx'}))
         assert (resp.status_code==401)
 
+    def test_retrive_allfields_singleboard_invalidboardid(self):  # testcase_59
+        id = "xxxxx"
+        resp = requests.get(self.url + id, params=self.payload)
+        assert (resp.status_code == 400)
+
 
 
 
