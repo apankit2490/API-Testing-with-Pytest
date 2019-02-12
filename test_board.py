@@ -167,10 +167,16 @@ class Test_board_push:
             except:
                 assert (id!=response.json()['id'])
 
-    def test_delete_board(self):#testcase_36
+    def test_delete_board_FORBIDDEN(self):#testcase_36
           id = "5c616913e3fca870309fd37a"
           response=requests.delete(self.url+id+'/',params=self.payload)
           assert (response.status_code==401)
+    def test_delete_board_member(self):#testcase_37
+        id="5c615ba7f5c7564b8f9e8c43"
+        idmember="5c60f71ca2a4b77022e377fd"
+        response=requests.delete(self.url+id+"/members/"+idmember,params=self.payload)
+        assert (response.status_code==200)
+
 
 
 
