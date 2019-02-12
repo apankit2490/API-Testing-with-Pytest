@@ -68,6 +68,13 @@ class Test_board_push2:
                                 params={'key': self.key, 'token': self.token, 'fullName': 'ankkit249012',
                                         'email': 'abcd@xyz.com', 'type': 'admin'})
         assert (response.status_code == 401)
+    def test_update_specific_boardmember(self):#testcase_51
+        id="5c616a0f0e01197a3562a289"
+        idmember="5c60f71ca2a4b77022e377fd"
+        response=requests.put(self.url+id+'/members/'+idmember,params={'key':self.key,'token':self.token,'type':'admin'})
+        assert (response.status_code==200)
+        returnvalue=response.json()['memberships'][0]['memberType']
+        assert (returnvalue=='admin')
 
 
 
