@@ -100,6 +100,13 @@ class Test_board_push2:
         idmember="5c60f71ca2a4b77022e377fd"
         response=requests.put(self.url+id+'/members/'+idmember,params={'key':self.key,'token':self.token,'type':'normal'})
         assert (response.status_code==403)
+    def test_retrive_allfields_singleboard(self):#testcase_57
+        id = "5c616913e3fca870309fd37a"
+        resp=requests.get(self.url+id,params=self.payload)
+        assert (resp.status_code==200)
+        returnid=resp.json()['id']
+        assert (returnid==id)
+
 
 
 
