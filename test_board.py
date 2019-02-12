@@ -186,6 +186,11 @@ class Test_board_push:
             idmember="5c60f71ca2a4b77022e377fd"
             response=requests.delete(self.url+id+"/members/"+idmember,params=self.payload)
             assert (response.status_code==404)
+    def test_delete_board_member_FORBIDDEN(self):#testcase_40
+            id="5c616913e3fca870309fd37a"
+            idmember="5c60f71ca2a4b77022e377fd"
+            response=requests.delete(self.url+id+"/members/"+idmember,params=self.payload)
+            assert (response.status_code==401)
 
 
 
