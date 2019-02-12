@@ -15,8 +15,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Test1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-103">
-              <caret line="10" column="37" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="37" />
+            <state relative-caret-position="187">
+              <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -24,11 +24,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test_board.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3759">
-              <caret line="19" column="71" lean-forward="true" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="71" />
+            <state relative-caret-position="119">
+              <caret line="193" column="46" lean-forward="true" selection-start-line="193" selection-start-column="46" selection-end-line="193" selection-end-column="46" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -36,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_board2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="61" column="38" selection-start-line="61" selection-start-column="38" selection-end-line="61" selection-end-column="38" />
+            <state relative-caret-position="137">
+              <caret line="58" column="63" selection-start-line="58" selection-start-column="63" selection-end-line="58" selection-end-column="63" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -229,9 +229,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="pytest_for_test_board2_Test_board_push2_test_update_boardmember - 2019.02.12 at 11h 34m 17s.xml">
-      <configuration name="pytest for test_board2.Test_board_push2.test_update_boardmember" configurationId="tests" />
-    </history-entry>
     <history-entry file="pytest_for_test_board2_Test_board_push2_test_update_boardmember - 2019.02.12 at 11h 34m 41s.xml">
       <configuration name="pytest for test_board2.Test_board_push2.test_update_boardmember" configurationId="tests" />
     </history-entry>
@@ -259,6 +256,9 @@
     <history-entry file="pytest_for_test_board2_Test_board_push2_test_update_boardmember_emptytype - 2019.02.12 at 11h 52m 26s.xml">
       <configuration name="pytest for test_board2.Test_board_push2.test_update_boardmember_emptytype" configurationId="tests" />
     </history-entry>
+    <history-entry file="pytest_for_test_board2_Test_board_push2_test_update_boardmember_emptytype - 2019.02.12 at 11h 53m 01s.xml">
+      <configuration name="pytest for test_board2.Test_board_push2.test_update_boardmember_emptytype" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
@@ -269,11 +269,11 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" weight="0.2801303" />
       <window_info anchor="bottom" id="Python Console" weight="0.32899022" />
-      <window_info anchor="bottom" id="Terminal" weight="0.33713356" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.33713356" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.39739415" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.39739415" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39739415" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -354,16 +354,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-103">
-          <caret line="10" column="37" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/lib/python3.6/json/decoder.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="127">
@@ -371,20 +361,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_board.py">
+    <entry file="file://$PROJECT_DIR$/Test1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3759">
-          <caret line="19" column="71" lean-forward="true" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="71" />
+        <state relative-caret-position="187">
+          <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test_board2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="61" column="38" selection-start-line="61" selection-start-column="38" selection-end-line="61" selection-end-column="38" />
+        <state relative-caret-position="137">
+          <caret line="58" column="63" selection-start-line="58" selection-start-column="63" selection-end-line="58" selection-end-column="63" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_board.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="193" column="46" lean-forward="true" selection-start-line="193" selection-start-column="46" selection-end-line="193" selection-end-column="46" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>

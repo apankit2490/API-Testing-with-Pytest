@@ -56,12 +56,19 @@ class Test_board_push2:
                                 params={'key': self.key, 'token': self.token, 'fullName': 'ankkit249012',
                                         'email': None, 'type': 'normal'})
         assert (response.status_code == 400)
-    def test_update_boardmember_emptytype(self):  # testcase_48
+    def test_update_boardmember_emptytype(self):  # testcase_49
         id = "5c610bdaef382018a436b32e"
         response = requests.put(self.url + id + '/members',
                                 params={'key': self.key, 'token': self.token, 'fullName': 'ankkit249012',
                                         'email': 'abcd@xyz.com', 'type': ''})
         assert (response.status_code == 400)
+    def test_update_boardmember_forbidden(self):  # testcase_50
+        id = "5c616913e3fca870309fd37a"
+        response = requests.put(self.url + id + '/members',
+                                params={'key': self.key, 'token': self.token, 'fullName': 'ankkit249012',
+                                        'email': 'abcd@xyz.com', 'type': 'admin'})
+        assert (response.status_code == 401)
+
 
 
 
