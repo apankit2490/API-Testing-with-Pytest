@@ -131,7 +131,11 @@ class Test_board_push2:
         field="labelNames"
         resp = requests.get(self.url + id, params={'key':'xxxx','token':self.token,'field':field})
         assert (resp.status_code==401)
-
+    def test_retrive_specificfields_board_invalidBoardid(self):#testcase_63
+        id="xxxx"
+        field="labelNames"
+        resp = requests.get(self.url + id, params={'key':self.key,'token':self.token,'field':field})
+        assert (resp.status_code==400)
 
 
 
