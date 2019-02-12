@@ -119,22 +119,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.pytest for test_board2.Test_board_push2.test_update_specific_boardmember_invalid_memberid">
-    <configuration name="pytest for test_board2.Test_board_push2.test_update_boardmember_forbidden" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="TestAPI" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_board2.Test_board_push2.test_update_boardmember_forbidden&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python tests.pytest for test_board2.Test_board_push2.test_update_specific_boardmember_invalid_membertype">
     <configuration name="pytest for test_board2.Test_board_push2.test_update_specific_boardmember" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="TestAPI" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -195,13 +180,28 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest for test_board2.Test_board_push2.test_update_specific_boardmember_invalid_membertype" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="TestAPI" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_board2.Test_board_push2.test_update_specific_boardmember_invalid_membertype&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest for test_board2.Test_board_push2.test_update_specific_boardmember_invalid_membertype" />
         <item itemvalue="Python tests.pytest for test_board2.Test_board_push2.test_update_specific_boardmember_invalid_memberid" />
         <item itemvalue="Python tests.pytest for test_board2.Test_board_push2.test_update_specific_boardmember_invalid_boardid" />
         <item itemvalue="Python tests.pytest for test_board2.Test_board_push2.test_update_specific_boardmember_invalid_key" />
         <item itemvalue="Python tests.pytest for test_board2.Test_board_push2.test_update_specific_boardmember" />
-        <item itemvalue="Python tests.pytest for test_board2.Test_board_push2.test_update_boardmember_forbidden" />
       </list>
     </recent_temporary>
   </component>

@@ -95,6 +95,12 @@ class Test_board_push2:
         idmember="5c60f71ca2a4b77022e377fd"
         response=requests.put(self.url+id+'/members/'+idmember,params={'key':self.key,'token':self.token,'type':None})
         assert (response.status_code==400)
+    def test_update_specific_boardmember_invalid_membertype(self):#testcase_56
+        id="5c616913e3fca870309fd37a"
+        idmember="5c60f71ca2a4b77022e377fd"
+        response=requests.put(self.url+id+'/members/'+idmember,params={'key':self.key,'token':self.token,'type':'normal'})
+        assert (response.status_code==403)
+
 
 
 
