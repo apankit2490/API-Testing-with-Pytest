@@ -188,7 +188,7 @@ class Test_list:
         response = requests.get(url_list + '/' + lid+'/',params=payload.update({'field':self.testinvalidkey}))
         assert (response.status_code == 401)
 
-    def test_retrive_actions(self):
+    def test_retrive_actions(self):#testcase_20
         bid = self.testboardid
         createlist(bid, 'test_archive')
         lid = getlistid(bid, 'test_archive')
@@ -196,7 +196,7 @@ class Test_list:
         response = requests.get(url_list + '/' + lid + '/actions', params=self.payload)
         assert (response.status_code == 200)
 
-    def test_retrive_actions_invalidkey(self):
+    def test_retrive_actions_invalidkey(self):#testcase_21
         bid = self.testboardid
         createlist(bid, 'test_archive')
         lid = getlistid(bid, 'test_archive')
@@ -204,7 +204,7 @@ class Test_list:
         response = requests.get(url_list + '/' + lid + '/actions', params=self.payload.update({'key':self.testinvalidkey}))
         assert (response.status_code == 401)
 
-    def test_retrive_actions_invalid_lid(self):
+    def test_retrive_actions_invalid_lid(self):#testcase_22
         bid = self.testboardid
         createlist(bid, 'test_archive')
         lid = self.testinvalidid
@@ -212,13 +212,13 @@ class Test_list:
         response = requests.get(url_list + '/' + lid + '/actions', params=self.payload)
         assert (response.status_code == 400)
 
-    def test_retrive_actions_forbidden(self):
+    def test_retrive_actions_forbidden(self):#testcase_23
         bid = self.testboardid
         createlist(bid, 'test_archive')
         lid = self.forbidden_Lid
         createcard(lid, 'hello')
         response = requests.get(url_list + '/' + lid + '/actions', params=self.payload)
-        assert (response.status_code == 404)
+        assert (response.status_code == 401)
 
 
 
