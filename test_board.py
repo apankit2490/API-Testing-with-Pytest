@@ -5,22 +5,24 @@ import requests
 
 
 class Test_board_push:
-    @classmethod
     def setup_class(cls):
-        with open('data.json','r') as data:
-            data=json.load(data)
-        cls.key=data['key']
-        cls.token=data['token']
-        cls.url=data['url']
-        cls.name=data['uname']
-        cls.testinvalidkey=data['testinvalidkey']
-        cls.testinvalidtoken=data['testinvalidtoken']
-        cls.testinvalidid=data['testinvalidid']
-        cls.payload={'key':cls.key,'token':cls.token,'name':cls.name}
-        createboard(cls.payload)
-        cls.testboardid=getid('test_BOARD')
-        cls.forbidden_id=data['forbidden_id']
+        with open('data.json', 'r') as data:
+            data = json.load(data)
+        cls.key = data['key']
+        cls.token = data['token']
+        cls.url = data['url']
+        cls.name = data['uname']
+        cls.payload = {'key': cls.key, 'token': cls.token, 'name': cls.name}
+        cls.testinvalidkey = data['testinvalidkey']
+        cls.testinvalidtoken = data['testinvalidtoken']
+        cls.testinvalidid = data['testinvalidid']
+        cls.payload = {'key': cls.key, 'token': cls.token, 'name': cls.name}
+        createboard(payload)
+        cls.testboardid = getid('test_BOARD')
+        cls.forbidden_id = data['forbidden_id']
 
+    def teardown_class(self):
+        print(deleteboard(self.testboardid))
 
     def test_newboard(self):#TestCase_1
         response=createboard({'key':self.key,'token':self.token,'name':'newboard'})
@@ -86,6 +88,7 @@ class Test_board_push:
         id=getid('test_emailkey')
         response=requests.post(self.url+id+"/emailKey/generate",params=self.payload)
         assert (response.status_code==200)
+        deleteboard(id)
     def test_emailkey_invalidkey(self):#testcase_15
         id = self.testboardid
         response = requests.post(self.url + id + "/emailKey/generate", params={'key':self.testinvalidkey, 'token': self.testinvalidtoken})
@@ -213,9 +216,7 @@ class Test_board_push:
             response=requests.delete(self.url+id+"/members/"+idmember,params=self.payload)
             assert (response.status_code==401)
 
-    @classmethod
-    def teardown_class(self):
-        print(deleteboard(self.testboardid))
+
 
 
 

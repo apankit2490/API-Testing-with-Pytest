@@ -60,7 +60,7 @@ def createcard(listid,name):
 # l=getlistid(z,'To Do')
 # print(l)
 # while(True):
-#     id=getid('xyz')
+#     id=getid('test_list')
 #     deleteboard(id)
 # print(addmembertoboard('5c615ba7f5c7564b8f9e8c43','ankit','ankitkumarpatnaik001@gmail.com','normal'))
-# print(getmemberid('5c615ba7f5c7564b8f9e8c43','ankit'))
+# print(getmemberid('   5c615ba7f5c7564b8f9e8c43','ankit'))
