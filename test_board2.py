@@ -1,7 +1,8 @@
 import pytest
+from Helper_boards import *
 import json
 import requests
-from Helper import *
+
 class Test_board_push2:
     @classmethod
     def setup_class(cls):
@@ -18,8 +19,8 @@ class Test_board_push2:
         cls.payload = {'key': cls.key, 'token': cls.token, 'name': cls.name}
         createboard(payload)
         cls.testboardid = getid('test_BOARD')
-
-    def teardown_method(self):
+        cls.forbidden_id = data['forbidden_id']
+    def teardown_class(self):
         print(deleteboard(self.testboardid))
 
     def test_update_board(self):#testcase_41
@@ -40,9 +41,10 @@ class Test_board_push2:
         assert (response.status_code == 400)
 
     def test_update_board_forbidden(self):#testcase_44
-        id="5c618c396220596250a10d64"#another's board
+        id=self.forbidden_id#another's board
         response=requests.put(self.url+id,params={'key':self.key,'token':self.token,'name':'divya hg'})
         assert (response.status_code==401)
+
     def test_update_boardmember(self):#testcase_45
         id = self.testboardid
         addmember = addmembertoboard(id, 'divya', 'divya.hgreddy@gmail.com', 'normal')
@@ -74,7 +76,7 @@ class Test_board_push2:
 
 
     def test_update_boardmember_forbidden(self):  # testcase_50
-        id = "5c618c396220596250a10d64"#another's board id
+        id = self.forbidden_id#another's board id
         response = addmembertoboard(id, 'divya', 'divya.hgreddy@gmail.com', 'normal')
         assert (response.status_code == 401)
 
@@ -121,7 +123,7 @@ class Test_board_push2:
 
 
     def test_update_specific_boardmember_invalid_forbidden(self):#testcase_56
-        id="5c618c396220596250a10d64"#another's boardid
+        id=self.forbidden_id#another's boardid
         idmember=self.testinvalidid
         response=requests.put(self.url+id+'/members/'+idmember,params={'key':self.key,'token':self.token,'type':'normal'})
         assert (response.status_code==401)
@@ -142,11 +144,11 @@ class Test_board_push2:
 
     def test_retrive_allfields_singleboard_invalidboardid(self):  # testcase_59
         id = self.testinvalidid
-        resp = requests.get(self.url + id, params=self.payload)
+        resp = requests.get(self.url + id, params=payload)
         assert (resp.status_code == 400)
 
     def test_retrive_allfields_singleboard_forbidden(self):  # testcase_60
-        id = "5c618c396220596250a10d64"#another's id
+        id = self.forbidden_id#another's id
         resp = requests.get(self.url + id, params=self.payload)
         assert (resp.status_code == 401)
 

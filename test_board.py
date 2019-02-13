@@ -1,35 +1,38 @@
 import pytest
+from Helper_boards import *
 import json
 import requests
 
-from Helper import *
-
 
 class Test_board_push:
-    @classmethod
     def setup_class(cls):
-        with open('data.json','r') as data:
-            data=json.load(data)
-        cls.key=data['key']
-        cls.token=data['token']
-        cls.url=data['url']
-        cls.name=data['uname']
-        cls.testinvalidkey=data['testinvalidkey']
-        cls.testinvalidtoken=data['testinvalidtoken']
-        cls.testinvalidid=data['testinvalidid']
-        cls.payload={'key':cls.key,'token':cls.token,'name':cls.name}
+        with open('data.json', 'r') as data:
+            data = json.load(data)
+        cls.key = data['key']
+        cls.token = data['token']
+        cls.url = data['url']
+        cls.name = data['uname']
+        cls.payload = {'key': cls.key, 'token': cls.token, 'name': cls.name}
+        cls.testinvalidkey = data['testinvalidkey']
+        cls.testinvalidtoken = data['testinvalidtoken']
+        cls.testinvalidid = data['testinvalidid']
+        cls.payload = {'key': cls.key, 'token': cls.token, 'name': cls.name}
         createboard(payload)
-        cls.testboardid=getid('test_BOARD')
-    def teardown_method(self):
+        cls.testboardid = getid('test_BOARD')
+        cls.forbidden_id = data['forbidden_id']
+
+    def teardown_class(self):
         print(deleteboard(self.testboardid))
 
     def test_newboard(self):#TestCase_1
-        response=createboard()
+        response=createboard({'key':self.key,'token':self.token,'name':'newboard'})
         assert (response.status_code==200)
-        board_id=response.json()['id']
+        board_id=getid('newboard')
         response=requests.get(self.url+'/'+board_id,params=self.payload)
         assert (response.json()['id']==board_id)
-        deleteboard(id)
+        deleteboard(board_id)
+
+
     def test_newboard_invalid_keyortoken(self):#TestCase_2
         response=createboard({'key':self.testinvalidkey,'token':self.testinvalidtoken})
         assert (response.status_code==401)
@@ -53,12 +56,11 @@ class Test_board_push:
         id = self.testboardid
         response=requests.post(self.url+id+"/calendarKey/generate",params={'key':self.testinvalidkey, 'token': self.testinvalidtoken})
         assert (response.status_code == 401)
-        deleteboard(id)
 
     def test_calenderkey_forbidden(self):#TestCase_8
-        id=self.testboardid
+        id=self.forbidden_id
         response=requests.post(self.url+id+"/calendarKey/generate",params={'key':self.key, 'token': self.token})
-        assert (response.status_code == 403)
+        assert (response.status_code == 401)
 
     '''def test_newchecklist(self):#testcase_9
         id="5c615ba7f5c7564b8f9e8c43"
@@ -86,6 +88,7 @@ class Test_board_push:
         id=getid('test_emailkey')
         response=requests.post(self.url+id+"/emailKey/generate",params=self.payload)
         assert (response.status_code==200)
+        deleteboard(id)
     def test_emailkey_invalidkey(self):#testcase_15
         id = self.testboardid
         response = requests.post(self.url + id + "/emailKey/generate", params={'key':self.testinvalidkey, 'token': self.testinvalidtoken})
@@ -102,12 +105,13 @@ class Test_board_push:
         assert (response.status_code == 200)
         color=response.json()['color']
         assert (color=='blue')
-        deleteboard(id)
 
     def test_create_lablel_invalidkey(self):#testcase_18
         id = self.testboardid
         response=requests.post(self.url+id+"/labels",params={'key':self.testinvalidkey,'token':self.testinvalidtoken,'name':'ankitpatnaik','color':'blue'})
         assert (response.status_code == 401)
+
+
     def test_create_lablel_invalid_id(self):#testcase_19
         id=self.testinvalidid
         response=requests.post(self.url+id+"/labels",params={'key':self.key,'token':self.token,'name':'ankitpatnaik','color':'blue'})
@@ -148,7 +152,7 @@ class Test_board_push:
         assert (response.status_code == 400)
 
     def test_list_create_forbidden(self):  # testcase_28
-        id = "5c618c396220596250a10d64"#id of another's board
+        id = self.forbidden_id#id of another's board
         response = requests.post(self.url + id + "/lists",
                                  params={'key': self.key, 'token': self.token, 'name': 'ankit', 'pos': 'top'})
         assert (response.status_code == 401)
@@ -186,7 +190,7 @@ class Test_board_push:
                 assert (id!=response.json()['id'])
 
     def test_delete_board_FORBIDDEN(self):#testcase_36
-          id = "5c618c396220596250a10d64"#another board's id
+          id = self.forbidden_id#another board's id
           response=requests.delete(self.url+id+'/',params=self.payload)
           assert (response.status_code==401)
     def test_delete_board_member(self):#testcase_37---DELETE CASE
@@ -207,7 +211,7 @@ class Test_board_push:
         response=requests.delete(self.url+id+"/members/"+idmember,params=self.payload)
         assert (response.status_code==400)
     def test_delete_board_member_FORBIDDEN(self):#testcase_40
-            id="5c618c396220596250a10d64"#another's board id
+            id=self.forbidden_id#another's board id
             idmember=self.testboardid
             response=requests.delete(self.url+id+"/members/"+idmember,params=self.payload)
             assert (response.status_code==401)
