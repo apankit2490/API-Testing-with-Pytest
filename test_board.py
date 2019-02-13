@@ -21,6 +21,7 @@ class Test_board_push:
         cls.payload={'key':cls.key,'token':cls.token,'name':cls.name}
         x=createboard(payload)
         cls.testboardid=getid('test_BOARD')
+        cls.forbidden_id=data['forbidden_id']
 
 
     def test_newboard(self):#TestCase_1
@@ -56,7 +57,7 @@ class Test_board_push:
         deleteboard(id)
 
     def test_calenderkey_forbidden(self):#TestCase_8
-        id="5c618c396220596250a10d64"
+        id=self.forbidden_id
         response=requests.post(self.url+id+"/calendarKey/generate",params={'key':self.key, 'token': self.token})
         assert (response.status_code == 401)
 
@@ -149,7 +150,7 @@ class Test_board_push:
         assert (response.status_code == 400)
 
     def test_list_create_forbidden(self):  # testcase_28
-        id = "5c618c396220596250a10d64"#id of another's board
+        id = self.forbidden_id#id of another's board
         response = requests.post(self.url + id + "/lists",
                                  params={'key': self.key, 'token': self.token, 'name': 'ankit', 'pos': 'top'})
         assert (response.status_code == 401)
@@ -187,7 +188,7 @@ class Test_board_push:
                 assert (id!=response.json()['id'])
 
     def test_delete_board_FORBIDDEN(self):#testcase_36
-          id = "5c618c396220596250a10d64"#another board's id
+          id = self.forbidden_id#another board's id
           response=requests.delete(self.url+id+'/',params=self.payload)
           assert (response.status_code==401)
     def test_delete_board_member(self):#testcase_37---DELETE CASE
@@ -208,7 +209,7 @@ class Test_board_push:
         response=requests.delete(self.url+id+"/members/"+idmember,params=self.payload)
         assert (response.status_code==400)
     def test_delete_board_member_FORBIDDEN(self):#testcase_40
-            id="5c618c396220596250a10d64"#another's board id
+            id=self.forbidden_id#another's board id
             idmember=self.testboardid
             response=requests.delete(self.url+id+"/members/"+idmember,params=self.payload)
             assert (response.status_code==401)

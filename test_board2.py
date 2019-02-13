@@ -19,7 +19,7 @@ class Test_board_push2:
         cls.payload = {'key': cls.key, 'token': cls.token, 'name': cls.name}
         createboard(payload)
         cls.testboardid = getid('test_BOARD')
-
+        cls.forbidden_id = data['forbidden_id']
     def teardown_method(self):
         print(deleteboard(self.testboardid))
 
@@ -41,7 +41,7 @@ class Test_board_push2:
         assert (response.status_code == 400)
 
     def test_update_board_forbidden(self):#testcase_44
-        id="5c618c396220596250a10d64"#another's board
+        id=self.forbidden_id#another's board
         response=requests.put(self.url+id,params={'key':self.key,'token':self.token,'name':'divya hg'})
         assert (response.status_code==401)
 
@@ -76,7 +76,7 @@ class Test_board_push2:
 
 
     def test_update_boardmember_forbidden(self):  # testcase_50
-        id = "5c618c396220596250a10d64"#another's board id
+        id = self.forbidden_id#another's board id
         response = addmembertoboard(id, 'divya', 'divya.hgreddy@gmail.com', 'normal')
         assert (response.status_code == 401)
 
@@ -123,7 +123,7 @@ class Test_board_push2:
 
 
     def test_update_specific_boardmember_invalid_forbidden(self):#testcase_56
-        id="5c618c396220596250a10d64"#another's boardid
+        id=self.forbidden_id#another's boardid
         idmember=self.testinvalidid
         response=requests.put(self.url+id+'/members/'+idmember,params={'key':self.key,'token':self.token,'type':'normal'})
         assert (response.status_code==401)
@@ -148,7 +148,7 @@ class Test_board_push2:
         assert (resp.status_code == 400)
 
     def test_retrive_allfields_singleboard_forbidden(self):  # testcase_60
-        id = "5c618c396220596250a10d64"#another's id
+        id = self.forbidden_id#another's id
         resp = requests.get(self.url + id, params=self.payload)
         assert (resp.status_code == 401)
 

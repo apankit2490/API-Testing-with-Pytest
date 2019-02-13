@@ -36,9 +36,24 @@ def addmembertoboard(id,fullname,email,type,key=key,token=token):
 def createlist(boardid,nameoflist,key=key,token=token):
     response=requests.post(url_list,params={'idBoard':boardid,'name':nameoflist,'key':key,'token':token})
     return response
+def getlistid(id,listname):
+    response = requests.get(url + id +'/lists', params=payload)
+    for i in response.json():
+        if i['name'].lower() == listname.lower():
+            return i['id']
+def createcard(listid,name):
+    url = "https://api.trello.com/1/cards"
 
+    querystring = {"idList": listid, "keepFromSource": "all",'key':key,'token':token}
 
+    response = requests.request("POST", url, params=querystring)
 
+# createboard(payload)
+# id=getid('test_list')
+# createlist(id,'ankit')
+# lid=getlistid(id,'ankit')
+# print(lid)
+# createcard(lid,'ankitcard')
 
 #print(getid('test_fobidden'))
 # while(True):
