@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd1b5aba-5549-48d1-8a2d-492baf1902e0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/Helper.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_board2.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_board2.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -9,6 +10,9 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="TestAPI" />
   </component>
   <component name="FileEditorManager">
     <leaf>
@@ -27,8 +31,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_board.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="23" column="44" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="23" selection-end-column="44" />
+            <state relative-caret-position="109">
+              <caret line="194" column="40" lean-forward="true" selection-start-line="192" selection-start-column="8" selection-end-line="194" selection-end-column="40" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -39,8 +43,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test_board2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="43" column="32" lean-forward="true" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
+            <state relative-caret-position="119">
+              <caret line="103" column="24" selection-start-line="103" selection-start-column="24" selection-end-line="103" selection-end-column="24" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -60,8 +64,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Helper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="41" column="89" selection-start-line="41" selection-start-column="59" selection-end-line="41" selection-end-column="89" />
+            <state relative-caret-position="97">
+              <caret line="27" column="52" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -84,6 +88,7 @@
       <find>tea</find>
       <find>dele</find>
       <find>delete</find>
+      <find>add</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -95,8 +100,8 @@
         <option value="$PROJECT_DIR$/Test1.py" />
         <option value="$PROJECT_DIR$/test_py.py" />
         <option value="$PROJECT_DIR$/data.json" />
-        <option value="$PROJECT_DIR$/Helper.py" />
         <option value="$PROJECT_DIR$/test_board.py" />
+        <option value="$PROJECT_DIR$/Helper.py" />
         <option value="$PROJECT_DIR$/test_board2.py" />
       </list>
     </option>
@@ -142,8 +147,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.pytest for test_board2.Test_board_push2.test_update_board_forbidden">
-    <configuration name="pytest for test_board2.Test_board_push2.test_update_board" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.pytest for test_board2.Test_board_push2.test_retrive_allfields_singleboard_invalidboardid">
+    <configuration name="pytest for test_board2.Test_board_push2.test_retrive_allfields_singleboard" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="TestAPI" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -154,11 +159,11 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_board2.Test_board_push2.test_update_board&quot;" />
+      <option name="_new_target" value="&quot;test_board2.Test_board_push2.test_retrive_allfields_singleboard&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_board2.Test_board_push2.test_update_board_INVALID_KEY" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_board2.Test_board_push2.test_retrive_allfields_singleboard_invalidboardid" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="TestAPI" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -169,11 +174,11 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_board2.Test_board_push2.test_update_board_INVALID_KEY&quot;" />
+      <option name="_new_target" value="&quot;test_board2.Test_board_push2.test_retrive_allfields_singleboard_invalidboardid&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_board2.Test_board_push2.test_update_board_INVALID_boardid" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_board2.Test_board_push2.test_retrive_allfields_singleboard_invalidkey" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="TestAPI" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -184,11 +189,11 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_board2.Test_board_push2.test_update_board_INVALID_boardid&quot;" />
+      <option name="_new_target" value="&quot;test_board2.Test_board_push2.test_retrive_allfields_singleboard_invalidkey&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_board2.Test_board_push2.test_update_board_forbidden" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_board2.Test_board_push2.test_update_specific_boardmember_invalid_forbidden" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="TestAPI" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -199,11 +204,11 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_board2.Test_board_push2.test_update_board_forbidden&quot;" />
+      <option name="_new_target" value="&quot;test_board2.Test_board_push2.test_update_specific_boardmember_invalid_forbidden&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_board.Test_board_push.test_delete_board_member_FORBIDDEN" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_board2.Test_board_push2.test_update_specific_boardmember_invalid_membertype" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="TestAPI" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -214,17 +219,17 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_board.Test_board_push.test_delete_board_member_FORBIDDEN&quot;" />
+      <option name="_new_target" value="&quot;test_board2.Test_board_push2.test_update_specific_boardmember_invalid_membertype&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.pytest for test_board2.Test_board_push2.test_update_board_forbidden" />
-        <item itemvalue="Python tests.pytest for test_board2.Test_board_push2.test_update_board_INVALID_boardid" />
-        <item itemvalue="Python tests.pytest for test_board2.Test_board_push2.test_update_board_INVALID_KEY" />
-        <item itemvalue="Python tests.pytest for test_board2.Test_board_push2.test_update_board" />
-        <item itemvalue="Python tests.pytest for test_board.Test_board_push.test_delete_board_member_FORBIDDEN" />
+        <item itemvalue="Python tests.pytest for test_board2.Test_board_push2.test_retrive_allfields_singleboard_invalidboardid" />
+        <item itemvalue="Python tests.pytest for test_board2.Test_board_push2.test_retrive_allfields_singleboard_invalidkey" />
+        <item itemvalue="Python tests.pytest for test_board2.Test_board_push2.test_retrive_allfields_singleboard" />
+        <item itemvalue="Python tests.pytest for test_board2.Test_board_push2.test_update_specific_boardmember_invalid_forbidden" />
+        <item itemvalue="Python tests.pytest for test_board2.Test_board_push2.test_update_specific_boardmember_invalid_membertype" />
       </list>
     </recent_temporary>
   </component>
@@ -250,42 +255,41 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="pytest_for_test_board_Test_board_push_test_delete_board_member_FORBIDDEN - 2019.02.13 at 01h 01m 07s.xml">
-      <configuration name="pytest for test_board.Test_board_push.test_delete_board_member_FORBIDDEN" configurationId="tests" />
+    <history-entry file="pytest_for_test_board2_Test_board_push2_test_update_specific_boardmember - 2019.02.13 at 09h 36m 22s.xml">
+      <configuration name="pytest for test_board2.Test_board_push2.test_update_specific_boardmember" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_for_test_board_Test_board_push_test_delete_board_member_FORBIDDEN - 2019.02.13 at 01h 01m 27s.xml">
-      <configuration name="pytest for test_board.Test_board_push.test_delete_board_member_FORBIDDEN" configurationId="tests" />
+    <history-entry file="pytest_for_test_board2_Test_board_push2_test_update_specific_boardmember - 2019.02.13 at 09h 39m 10s.xml">
+      <configuration name="pytest for test_board2.Test_board_push2.test_update_specific_boardmember" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_for_test_board2_Test_board_push2_test_update_board - 2019.02.13 at 01h 04m 24s.xml">
-      <configuration name="pytest for test_board2.Test_board_push2.test_update_board" configurationId="tests" />
+    <history-entry file="pytest_for_test_board2_Test_board_push2_test_update_specific_boardmember - 2019.02.13 at 09h 39m 52s.xml">
+      <configuration name="pytest for test_board2.Test_board_push2.test_update_specific_boardmember" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_for_test_board2_Test_board_push2_test_update_board - 2019.02.13 at 01h 04m 41s.xml">
-      <configuration name="pytest for test_board2.Test_board_push2.test_update_board" configurationId="tests" />
+    <history-entry file="pytest_for_test_board2_Test_board_push2_test_update_specific_boardmember - 2019.02.13 at 09h 41m 35s.xml">
+      <configuration name="pytest for test_board2.Test_board_push2.test_update_specific_boardmember" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_for_test_board2_Test_board_push2_test_update_board - 2019.02.13 at 01h 05m 23s.xml">
-      <configuration name="pytest for test_board2.Test_board_push2.test_update_board" configurationId="tests" />
+    <history-entry file="pytest_for_test_board2_Test_board_push2_test_update_specific_boardmember - 2019.02.13 at 09h 44m 59s.xml">
+      <configuration name="pytest for test_board2.Test_board_push2.test_update_specific_boardmember" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_for_test_board2_Test_board_push2_test_update_board - 2019.02.13 at 01h 08m 03s.xml">
-      <configuration name="pytest for test_board2.Test_board_push2.test_update_board" configurationId="tests" />
+    <history-entry file="pytest_for_test_board2_Test_board_push2_test_update_specific_boardmember - 2019.02.13 at 09h 45m 02s.xml">
+      <configuration name="pytest for test_board2.Test_board_push2.test_update_specific_boardmember" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_for_test_board2_Test_board_push2_test_update_board - 2019.02.13 at 01h 10m 00s.xml">
-      <configuration name="pytest for test_board2.Test_board_push2.test_update_board" configurationId="tests" />
+    <history-entry file="pytest_for_test_board2_Test_board_push2_test_update_specific_boardmember_invalid_key - 2019.02.13 at 09h 46m 37s.xml">
+      <configuration name="pytest for test_board2.Test_board_push2.test_update_specific_boardmember_invalid_key" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_for_test_board2_Test_board_push2_test_update_board_INVALID_KEY - 2019.02.13 at 01h 10m 59s.xml">
-      <configuration name="pytest for test_board2.Test_board_push2.test_update_board_INVALID_KEY" configurationId="tests" />
+    <history-entry file="pytest_for_test_board2_Test_board_push2_test_update_specific_boardmember_invalid_key - 2019.02.13 at 09h 47m 00s.xml">
+      <configuration name="pytest for test_board2.Test_board_push2.test_update_specific_boardmember_invalid_key" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_for_test_board2_Test_board_push2_test_update_board_INVALID_boardid - 2019.02.13 at 01h 11m 24s.xml">
-      <configuration name="pytest for test_board2.Test_board_push2.test_update_board_INVALID_boardid" configurationId="tests" />
+    <history-entry file="pytest_for_test_board2_Test_board_push2_test_update_specific_boardmember_invalid_boardid - 2019.02.13 at 09h 47m 35s.xml">
+      <configuration name="pytest for test_board2.Test_board_push2.test_update_specific_boardmember_invalid_boardid" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_for_test_board2_Test_board_push2_test_update_board_forbidden - 2019.02.13 at 01h 11m 48s.xml">
-      <configuration name="pytest for test_board2.Test_board_push2.test_update_board_forbidden" configurationId="tests" />
+    <history-entry file="pytest_for_test_board2_Test_board_push2_test_update_specific_boardmember_invalid_boardid - 2019.02.13 at 09h 47m 43s.xml">
+      <configuration name="pytest for test_board2.Test_board_push2.test_update_specific_boardmember_invalid_boardid" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info id="Favorites" order="0" side_tool="true" weight="0.3299373" />
       <window_info content_ui="combo" id="Project" order="1" weight="0.18808778" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.33713356" />
@@ -340,11 +344,31 @@
           <line>195</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test_board2.py</url>
+          <line>85</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="setValue">
+      <expression>
+        <expression-string>'5c63989150cefa425dd7b633'</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>'5c63921a015de85c3904cf1b'</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>'5c639556883a9b1948ce4e85'</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>'5c631ae6ab8e4488a0c0a393'</expression-string>
         <language-id>Python</language-id>
@@ -399,13 +423,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="78" selection-start-line="5" selection-start-column="78" selection-end-line="5" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="201">
@@ -420,30 +437,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Helper.py">
+    <entry file="file://$PROJECT_DIR$/data.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="41" column="89" selection-start-line="41" selection-start-column="59" selection-end-line="41" selection-end-column="89" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="85">
+          <caret line="5" column="78" selection-start-line="5" selection-start-column="78" selection-end-line="5" selection-end-column="78" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test_board.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="23" column="44" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="23" selection-end-column="44" />
+        <state relative-caret-position="109">
+          <caret line="194" column="40" lean-forward="true" selection-start-line="192" selection-start-column="8" selection-end-line="194" selection-end-column="40" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Helper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="27" column="52" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test_board2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="43" column="32" lean-forward="true" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
+        <state relative-caret-position="119">
+          <caret line="103" column="24" selection-start-line="103" selection-start-column="24" selection-end-line="103" selection-end-column="24" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
