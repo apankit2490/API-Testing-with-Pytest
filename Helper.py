@@ -25,13 +25,11 @@ def getid(boardname):
 def getmemberid(id,nameofuser):
     response=requests.get(url+id+'/members',params=payload)
     for i in response.json():
-        if i['fullName']==nameofuser:
+        if i['fullName'].lower()==nameofuser.lower():
             return i['id']
 
-def addmembertoboard(id,fullname,email,type):
+def addmembertoboard(id,fullname,email,type,key=key,token=token):
     url_add=url+id+'/members'
-    parameter = payload
-    print(parameter)
     response=requests.put(url_add,params={'key':key,'token':token,'id':id,'fullName':fullname,'email':email,'type':type})
     return response
 
@@ -39,5 +37,5 @@ def addmembertoboard(id,fullname,email,type):
 #print(getid('test_fobidden'))
 # id=getid('test_BOARD')
 # deleteboard(id)
-print(addmembertoboard('5c615ba7f5c7564b8f9e8c43','ankit','ankitkumarpatnaik001@gmail.com','normal'))
-print(getmemberid('5c615ba7f5c7564b8f9e8c43','ankit'))
+# print(addmembertoboard('5c615ba7f5c7564b8f9e8c43','ankit','ankitkumarpatnaik001@gmail.com','normal'))
+# print(getmemberid('5c615ba7f5c7564b8f9e8c43','ankit'))

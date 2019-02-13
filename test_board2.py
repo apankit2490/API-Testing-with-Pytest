@@ -44,113 +44,139 @@ class Test_board_push2:
         response=requests.put(self.url+id,params={'key':self.key,'token':self.token,'name':'divya hg'})
         assert (response.status_code==401)
     def test_update_boardmember(self):#testcase_45
-        id="5c610bdaef382018a436b32e"
-        response=requests.put(self.url+id+'/members',params={'key':self.key,'token':self.token,'fullName':'ankkit249012',
-                                                             'email':'abcd@xyz.com','type':'normal'})
-        assert (response.status_code==200)
+        id = self.testboardid
+        addmember = addmembertoboard(id, 'divya', 'divya.hgreddy@gmail.com', 'normal')
+        assert (addmember.status_code==200)
 
     def test_update_boardmember_invalidkey(self):  # testcase_46
-        id = "5c610bdaef382018a436b32e"
-        response = requests.put(self.url + id + '/members',
-                                params={'key': 'ssssddd', 'token': 'ssds', 'fullName': 'ankkit249012',
-                                        'email': 'abcd@xyz.com', 'type': 'normal'})
+        id = self.testboardid
+        response = addmembertoboard(id,'divya', 'divya.hgreddy@gmail.com', 'normal',self.testinvalidkey,self.testinvalidtoken)
         assert (response.status_code == 401)
+
+
     def test_update_boardmember_invalidboardid(self):  # testcase_47
-        id = "xxxsss"
-        response = requests.put(self.url + id + '/members',
-                                params={'key': self.key, 'token': self.token, 'fullName': 'ankkit249012',
-                                        'email': 'abcd@xyz.com', 'type': 'normal'})
+        id = self.testinvalidid
+        response = addmembertoboard(id,'divya', 'divya.hgreddy@gmail.com', 'normal')
         assert (response.status_code == 400)
 
     def test_update_boardmember_emptyemail(self):  # testcase_48
-        id = "5c610bdaef382018a436b32e"
-        response = requests.put(self.url + id + '/members',
-                                params={'key': self.key, 'token': self.token, 'fullName': 'ankkit249012',
-                                        'email': None, 'type': 'normal'})
+        id = self.testboardid
+        response = addmembertoboard(id,'divya', '', 'normal')
         assert (response.status_code == 400)
+
+
+
     def test_update_boardmember_emptytype(self):  # testcase_49
-        id = "5c610bdaef382018a436b32e"
-        response = requests.put(self.url + id + '/members',
-                                params={'key': self.key, 'token': self.token, 'fullName': 'ankkit249012',
-                                        'email': 'abcd@xyz.com', 'type': ''})
+        id = self.testboardid
+        response = addmembertoboard(id, 'divya', 'divya.hgreddy@gmail.com', '')
         assert (response.status_code == 400)
+
+
+
     def test_update_boardmember_forbidden(self):  # testcase_50
-        id = "5c616913e3fca870309fd37a"
-        response = requests.put(self.url + id + '/members',
-                                params={'key': self.key, 'token': self.token, 'fullName': 'ankkit249012',
-                                        'email': 'abcd@xyz.com', 'type': 'admin'})
+        id = "5c618c396220596250a10d64"#another's board id
+        response = addmembertoboard(id, 'divya', 'divya.hgreddy@gmail.com', 'normal')
         assert (response.status_code == 401)
+
+
+
     def test_update_specific_boardmember(self):#testcase_51
-        id="5c616a0f0e01197a3562a289"
-        idmember="5c60f71ca2a4b77022e377fd"
+        id=self.testboardid
+        ADDMEMBER = addmembertoboard(id, 'kavya G Rao', 'kavya.rao@hashedin.com', 'normal')
+        idmember=getmemberid(id,'kavya G Rao')
         response=requests.put(self.url+id+'/members/'+idmember,params={'key':self.key,'token':self.token,'type':'admin'})
         assert (response.status_code==200)
-        returnvalue=response.json()['memberships'][0]['memberType']
-        assert (returnvalue=='admin')
+
+
+
     def test_update_specific_boardmember_invalid_key(self):#testcase_52
-        id="5c616a0f0e01197a3562a289"
-        idmember="5c60f71ca2a4b77022e377fd"
-        response=requests.put(self.url+id+'/members/'+idmember,params={'key':'aaxx','token':self.token,'type':'admin'})
+        id=self.testboardid
+        ADDMEMBER = addmembertoboard(id, 'kavya G Rao', 'kavya.rao@hashedin.com', 'normal')
+        idmember=getmemberid(id,'kavya G Rao')
+        response=requests.put(self.url+id+'/members/'+idmember,params={'key':self.testinvalidkey,'token':self.testinvalidtoken,'type':'admin'})
         assert (response.status_code==401)
+
+
     def test_update_specific_boardmember_invalid_boardid(self):#testcase_53
-        id="aaaa"
-        idmember="5c60f71ca2a4b77022e377fd"
+        id=self.testinvalidid
+        ADDMEMBER = addmembertoboard(self.testboardid, 'kavya G Rao', 'kavya.rao@hashedin.com', 'normal')
+        idmember = getmemberid(self.testboardid, 'kavya G Rao')
         response=requests.put(self.url+id+'/members/'+idmember,params={'key':self.key,'token':self.token,'type':'admin'})
         assert (response.status_code==400)
+
+
     def test_update_specific_boardmember_invalid_memberid(self):#testcase_54
-        id="5c616a0f0e01197a3562a289"
-        idmember=""
+        id=self.testboardid
+        idmember=self.testinvalidid
         response=requests.put(self.url+id+'/members/'+idmember,params={'key':self.key,'token':self.token,'type':'admin'})
         assert (response.status_code==400)
+
+
     def test_update_specific_boardmember_invalid_membertype(self):#testcase_55
-        id="5c616a0f0e01197a3562a289"
-        idmember="5c60f71ca2a4b77022e377fd"
+        id = self.testboardid
+        ADDMEMBER = addmembertoboard(id, 'kavya G Rao', 'kavya.rao@hashedin.com', 'normal')
+        idmember = getmemberid(id, 'kavya G Rao')
         response=requests.put(self.url+id+'/members/'+idmember,params={'key':self.key,'token':self.token,'type':None})
         assert (response.status_code==400)
-    def test_update_specific_boardmember_invalid_membertype(self):#testcase_56
-        id="5c616913e3fca870309fd37a"
-        idmember="5c60f71ca2a4b77022e377fd"
+
+
+    def test_update_specific_boardmember_invalid_forbidden(self):#testcase_56
+        id="5c618c396220596250a10d64"#another's boardid
+        idmember=self.testinvalidid
         response=requests.put(self.url+id+'/members/'+idmember,params={'key':self.key,'token':self.token,'type':'normal'})
-        assert (response.status_code==403)
+        assert (response.status_code==401)
+
+
     def test_retrive_allfields_singleboard(self):#testcase_57
-        id = "5c616913e3fca870309fd37a"
+        id = self.testboardid
         resp=requests.get(self.url+id,params=self.payload)
         assert (resp.status_code==200)
         returnid=resp.json()['id']
         assert (returnid==id)
+
+
     def test_retrive_allfields_singleboard_invalidkey(self):#testcase_58
-        id = "5c616913e3fca870309fd37a"
-        resp=requests.get(self.url+id,params=self.payload.update({'key':'xxxxx'}))
+        id = self.testboardid
+        resp=requests.get(self.url+id,params=self.payload.update({'key':self.testinvalidkey}))
         assert (resp.status_code==401)
 
     def test_retrive_allfields_singleboard_invalidboardid(self):  # testcase_59
-        id = "xxxxx"
+        id = self.testinvalidid
         resp = requests.get(self.url + id, params=self.payload)
         assert (resp.status_code == 400)
 
     def test_retrive_allfields_singleboard_forbidden(self):  # testcase_60
-        id = "5c618c396220596250a10d64"
+        id = "5c618c396220596250a10d64"#another's id
         resp = requests.get(self.url + id, params=self.payload)
         assert (resp.status_code == 401)
+
+
+
     def test_retrive_specificfields_board(self):#testcase_61
-        id="5c616913e3fca870309fd37a"
+        id=self.testboardid
         field="labelNames"
         resp = requests.get(self.url + id, params={'key':self.key,'token':self.token,'field':field})
         assert (resp.status_code==200)
         assert id == resp.json()['id']
+
+
+
     def test_retrive_specificfields_board_invalidkey(self):#testcase_62
-        id="5c616913e3fca870309fd37a"
+        id=self.testboardid
         field="labelNames"
-        resp = requests.get(self.url + id, params={'key':'xxxx','token':self.token,'field':field})
+        resp = requests.get(self.url + id, params={'key':self.testinvalidkey,'token':self.token,'field':field})
         assert (resp.status_code==401)
+
+
+
     def test_retrive_specificfields_board_invalidBoardid(self):#testcase_63
-        id="xxxx"
+        id=self.testinvalidid
         field="labelNames"
         resp = requests.get(self.url + id, params={'key':self.key,'token':self.token,'field':field})
         assert (resp.status_code==400)
 
     def test_retrive_specificfields_board_invalidfield(self):  # testcase_64
-        id = "5c616913e3fca870309fd37a"
+        id = self.testboardid
         field = None
         resp = requests.get(self.url + id+'/field', params={'key': self.key, 'token': self.token})
         assert (resp.status_code == 404)
