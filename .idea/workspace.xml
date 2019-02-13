@@ -20,11 +20,56 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_lists.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="84" column="3" selection-start-line="84" selection-start-column="3" selection-end-line="84" selection-end-column="3" />
+            <state relative-caret-position="164">
+              <caret line="153" column="16" selection-start-line="153" selection-start-column="16" selection-end-line="153" selection-end-column="16" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_board2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="156">
+              <caret line="189" lean-forward="true" selection-start-line="189" selection-end-line="189" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Helper_boards.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="142">
+              <caret line="41" column="21" lean-forward="true" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test_board.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="243" lean-forward="true" selection-start-line="243" selection-end-line="243" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -44,8 +89,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Helper_lists.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="952">
-              <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+            <state relative-caret-position="84">
+              <caret line="60" column="9" selection-start-line="58" selection-start-column="5" selection-end-line="60" selection-end-column="9" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -65,7 +110,6 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>tea</find>
-      <find>dele</find>
       <find>delete</find>
       <find>test_update_boardmember</find>
       <find>add</find>
@@ -73,9 +117,16 @@
       <find>test_update_specific_boardmember</find>
       <find>5c618c396220596250a10d64</find>
       <find>&quot;5c618c396220596250a10d64&quot;</find>
+      <find>cls</find>
+      <find>payload</find>
+      <find>tear</find>
+      <find>dele</find>
+      <find>deleteb</find>
     </findStrings>
     <replaceStrings>
       <replace>self.forbidden_id</replace>
+      <replace>payloadx</replace>
+      <replace>self</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -88,12 +139,12 @@
         <option value="$PROJECT_DIR$/test_py.py" />
         <option value="$PROJECT_DIR$/Helper.py" />
         <option value="$PROJECT_DIR$/Helper_boards.py" />
-        <option value="$PROJECT_DIR$/Helper_lists.py" />
-        <option value="$PROJECT_DIR$/data.json" />
-        <option value="$PROJECT_DIR$/test_board.py" />
-        <option value="$PROJECT_DIR$/test_board2.py" />
-        <option value="$PROJECT_DIR$/list_data.json" />
         <option value="$PROJECT_DIR$/test_lists.py" />
+        <option value="$PROJECT_DIR$/data.json" />
+        <option value="$PROJECT_DIR$/list_data.json" />
+        <option value="$PROJECT_DIR$/Helper_lists.py" />
+        <option value="$PROJECT_DIR$/test_board2.py" />
+        <option value="$PROJECT_DIR$/test_board.py" />
       </list>
     </option>
   </component>
@@ -138,8 +189,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.pytest for test_lists.Test_list.test_archiveallcards_forbidden">
-    <configuration name="pytest for test_board2.Test_board_push2.test_retrive_allfields_singleboard_forbidden" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.pytest in TestAPI">
+    <configuration name="Helper_lists" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="TestAPI" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Helper_lists.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_board.Test_board_push.test_newboard" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="TestAPI" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -150,11 +222,11 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_board2.Test_board_push2.test_retrive_allfields_singleboard_forbidden&quot;" />
+      <option name="_new_target" value="&quot;test_board.Test_board_push.test_newboard&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_lists.Test_list.test_archiveallcards_forbidden" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest in TestAPI" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="TestAPI" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -165,38 +237,8 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_lists.Test_list.test_archiveallcards_forbidden&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pytest for test_lists.Test_list.test_archiveallcards_invalidLid" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="TestAPI" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_lists.Test_list.test_archiveallcards_invalidLid&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pytest for test_lists.Test_list.test_createlist_forbidden" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="TestAPI" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_lists.Test_list.test_createlist_forbidden&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <configuration name="pytest in test_board2.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
@@ -214,13 +256,28 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest in test_board.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="TestAPI" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_board.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.pytest for test_lists.Test_list.test_archiveallcards_forbidden" />
-        <item itemvalue="Python tests.pytest for test_board2.Test_board_push2.test_retrive_allfields_singleboard_forbidden" />
+        <item itemvalue="Python tests.pytest in TestAPI" />
+        <item itemvalue="Python tests.pytest in test_board.py" />
+        <item itemvalue="Python tests.pytest for test_board.Test_board_push.test_newboard" />
         <item itemvalue="Python tests.pytest in test_board2.py" />
-        <item itemvalue="Python tests.pytest for test_lists.Test_list.test_createlist_forbidden" />
-        <item itemvalue="Python tests.pytest for test_lists.Test_list.test_archiveallcards_invalidLid" />
+        <item itemvalue="Python.Helper_lists" />
       </list>
     </recent_temporary>
   </component>
@@ -246,35 +303,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="pytest_in_test_lists_py - 2019.02.13 at 12h 31m 17s.xml">
-      <configuration name="pytest in test_lists.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_test_lists_py - 2019.02.13 at 12h 32m 54s.xml">
-      <configuration name="pytest in test_lists.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_for_test_lists_Test_list_test_archiveallcards_invalidLid - 2019.02.13 at 12h 33m 45s.xml">
-      <configuration name="pytest for test_lists.Test_list.test_archiveallcards_invalidLid" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_for_test_lists_Test_list_test_createlist_forbidden - 2019.02.13 at 12h 41m 15s.xml">
-      <configuration name="pytest for test_lists.Test_list.test_createlist_forbidden" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_for_test_lists_Test_list_test_archiveallcards_forbidden - 2019.02.13 at 12h 42m 13s.xml">
-      <configuration name="pytest for test_lists.Test_list.test_archiveallcards_forbidden" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_test_board2_py - 2019.02.13 at 12h 49m 06s.xml">
+    <history-entry file="pytest_in_test_board2_py - 2019.02.13 at 16h 06m 30s.xml">
       <configuration name="pytest in test_board2.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_for_test_board2_Test_board_push2_test_retrive_allfields_singleboard_forbidden - 2019.02.13 at 12h 49m 11s.xml">
-      <configuration name="pytest for test_board2.Test_board_push2.test_retrive_allfields_singleboard_forbidden" configurationId="tests" />
+    <history-entry file="pytest_in_test_board2_py - 2019.02.13 at 16h 07m 50s.xml">
+      <configuration name="pytest in test_board2.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_for_test_board2_Test_board_push2_test_retrive_allfields_singleboard_forbidden - 2019.02.13 at 12h 49m 46s.xml">
-      <configuration name="pytest for test_board2.Test_board_push2.test_retrive_allfields_singleboard_forbidden" configurationId="tests" />
+    <history-entry file="pytest_in_test_board_py - 2019.02.13 at 16h 08m 22s.xml">
+      <configuration name="pytest in test_board.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_for_test_lists_Test_list_test_archiveallcards_forbidden - 2019.02.13 at 12h 51m 10s.xml">
-      <configuration name="pytest for test_lists.Test_list.test_archiveallcards_forbidden" configurationId="tests" />
+    <history-entry file="pytest_in_test_board_py - 2019.02.13 at 16h 11m 10s.xml">
+      <configuration name="pytest in test_board.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_for_test_lists_Test_list_test_archiveallcards_forbidden - 2019.02.13 at 12h 51m 31s.xml">
-      <configuration name="pytest for test_lists.Test_list.test_archiveallcards_forbidden" configurationId="tests" />
+    <history-entry file="pytest_in_test_board_py - 2019.02.13 at 16h 14m 09s.xml">
+      <configuration name="pytest in test_board.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_board_py - 2019.02.13 at 16h 14m 35s.xml">
+      <configuration name="pytest in test_board.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_board_py - 2019.02.13 at 16h 16m 08s.xml">
+      <configuration name="pytest in test_board.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_for_test_board_Test_board_push_test_newboard - 2019.02.13 at 16h 16m 59s.xml">
+      <configuration name="pytest for test_board.Test_board_push.test_newboard" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_board_py - 2019.02.13 at 16h 17m 56s.xml">
+      <configuration name="pytest in test_board.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_TestAPI - 2019.02.13 at 16h 21m 21s.xml">
+      <configuration name="pytest in TestAPI" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -282,7 +339,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" weight="0.3299373" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.18808778" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.18808778" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.33713356" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
@@ -290,7 +347,7 @@
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" weight="0.32899022" />
       <window_info anchor="bottom" id="Version Control" order="5" weight="0.2801303" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.42019543" />
+      <window_info anchor="bottom" id="Run" order="6" visible="true" weight="0.42019543" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.41530946" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -301,7 +358,7 @@
     </layout>
     <layout-to-restore>
       <window_info id="Favorites" order="0" side_tool="true" weight="0.3299373" />
-      <window_info content_ui="combo" id="Project" order="1" weight="0.18808778" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.18808778" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.33713356" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
@@ -309,8 +366,8 @@
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" weight="0.32899022" />
       <window_info anchor="bottom" id="Version Control" order="5" weight="0.2801303" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.42019543" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.41530946" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.42019543" />
+      <window_info active="true" anchor="bottom" id="Debug" order="7" visible="true" weight="0.41530946" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="10" />
@@ -328,14 +385,19 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/test_board.py</url>
-          <line>100</line>
-          <option name="timeStamp" value="28" />
+          <line>101</line>
+          <option name="timeStamp" value="46" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="setValue">
+      <expression>
+        <expression-string>'5c63c118d3f63d42869c69f1'</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>'5c63989150cefa425dd7b633'</expression-string>
         <language-id>Python</language-id>
@@ -410,23 +472,6 @@
         <state relative-caret-position="-1122" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Helper_boards.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-289">
-          <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/_pytest/python.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="739" selection-start-line="739" selection-end-line="739" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/lib/python3.6/json/decoder.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -434,40 +479,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_board.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="23" column="45" lean-forward="true" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_board2.py">
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/_pytest/python.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
-          <caret line="150" column="10" lean-forward="true" selection-start-line="150" selection-start-column="10" selection-end-line="150" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Helper_lists.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
+          <caret line="499" selection-start-line="499" selection-end-line="499" />
         </state>
       </provider>
     </entry>
@@ -478,10 +493,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Helper_boards.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="41" column="21" lean-forward="true" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Helper_lists.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="60" column="9" selection-start-line="58" selection-start-column="5" selection-end-line="60" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test_lists.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="84" column="3" selection-start-line="84" selection-start-column="3" selection-end-line="84" selection-end-column="3" />
+        <state relative-caret-position="164">
+          <caret line="153" column="16" selection-start-line="153" selection-start-column="16" selection-end-line="153" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_board2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="189" lean-forward="true" selection-start-line="189" selection-end-line="189" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_board.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="243" lean-forward="true" selection-start-line="243" selection-end-line="243" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>

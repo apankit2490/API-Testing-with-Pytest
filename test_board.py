@@ -7,8 +7,6 @@ import requests
 class Test_board_push:
     @classmethod
     def setup_class(cls):
-        Test_board_push().__new__(cls)
-        cls.Test_board_push=Test_board_push()
         with open('data.json','r') as data:
             data=json.load(data)
         cls.key=data['key']
@@ -19,18 +17,20 @@ class Test_board_push:
         cls.testinvalidtoken=data['testinvalidtoken']
         cls.testinvalidid=data['testinvalidid']
         cls.payload={'key':cls.key,'token':cls.token,'name':cls.name}
-        x=createboard(payload)
+        createboard(cls.payload)
         cls.testboardid=getid('test_BOARD')
         cls.forbidden_id=data['forbidden_id']
 
 
     def test_newboard(self):#TestCase_1
-        response=createboard()
+        response=createboard({'key':self.key,'token':self.token,'name':'newboard'})
         assert (response.status_code==200)
-        board_id=response.json()['id']
+        board_id=getid('newboard')
         response=requests.get(self.url+'/'+board_id,params=self.payload)
         assert (response.json()['id']==board_id)
         deleteboard(board_id)
+
+
     def test_newboard_invalid_keyortoken(self):#TestCase_2
         response=createboard({'key':self.testinvalidkey,'token':self.testinvalidtoken})
         assert (response.status_code==401)
@@ -54,7 +54,6 @@ class Test_board_push:
         id = self.testboardid
         response=requests.post(self.url+id+"/calendarKey/generate",params={'key':self.testinvalidkey, 'token': self.testinvalidtoken})
         assert (response.status_code == 401)
-        deleteboard(id)
 
     def test_calenderkey_forbidden(self):#TestCase_8
         id=self.forbidden_id
@@ -215,7 +214,7 @@ class Test_board_push:
             assert (response.status_code==401)
 
     @classmethod
-    def teardown_method(self):
+    def teardown_class(self):
         print(deleteboard(self.testboardid))
 
 

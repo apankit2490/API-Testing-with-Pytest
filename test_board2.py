@@ -20,7 +20,7 @@ class Test_board_push2:
         createboard(payload)
         cls.testboardid = getid('test_BOARD')
         cls.forbidden_id = data['forbidden_id']
-    def teardown_method(self):
+    def teardown_class(self):
         print(deleteboard(self.testboardid))
 
     def test_update_board(self):#testcase_41
@@ -144,7 +144,7 @@ class Test_board_push2:
 
     def test_retrive_allfields_singleboard_invalidboardid(self):  # testcase_59
         id = self.testinvalidid
-        resp = requests.get(self.url + id, params=self.payload)
+        resp = requests.get(self.url + id, params=payload)
         assert (resp.status_code == 400)
 
     def test_retrive_allfields_singleboard_forbidden(self):  # testcase_60
