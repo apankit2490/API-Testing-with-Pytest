@@ -47,6 +47,7 @@ def createcard(listid,name):
     querystring = {"idList": listid, "keepFromSource": "all",'key':key,'token':token,'name':name}
 
     response = requests.request("POST", url, params=querystring)
+    return response
 
 # createboard(payload)
 # id=getid('test_list')
@@ -54,8 +55,10 @@ def createcard(listid,name):
 # lid=getlistid(id,'ankit')
 # print(lid)
 # createcard(lid,'ankitcard')
-
-#print(getid('test_fobidden'))
+#
+# z=getid('ankit')
+# l=getlistid(z,'To Do')
+# print(l)
 # while(True):
 #     id=getid('xyz')
 #     deleteboard(id)
