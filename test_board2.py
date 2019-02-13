@@ -1,7 +1,8 @@
 import pytest
+from Helper_boards import *
 import json
 import requests
-from Helper import *
+
 class Test_board_push2:
     @classmethod
     def setup_class(cls):
@@ -43,6 +44,7 @@ class Test_board_push2:
         id="5c618c396220596250a10d64"#another's board
         response=requests.put(self.url+id,params={'key':self.key,'token':self.token,'name':'divya hg'})
         assert (response.status_code==401)
+
     def test_update_boardmember(self):#testcase_45
         id = self.testboardid
         addmember = addmembertoboard(id, 'divya', 'divya.hgreddy@gmail.com', 'normal')

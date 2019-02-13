@@ -34,8 +34,13 @@ def addmembertoboard(id,fullname,email,type,key=key,token=token):
     return response
 
 
+
+
 #print(getid('test_fobidden'))
 # id=getid('test_BOARD')
 # deleteboard(id)
 # print(addmembertoboard('5c615ba7f5c7564b8f9e8c43','ankit','ankitkumarpatnaik001@gmail.com','normal'))
 # print(getmemberid('5c615ba7f5c7564b8f9e8c43','ankit'))
+
+if __name__=='__main__':
+    allboardsurl
